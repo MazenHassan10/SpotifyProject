@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none; /* Remove the default thumb */
+  width: 0; /* Set width to 0 */
+  height: 0; /* Set height to 0 */
+  margin-top: -4px;
+  transition: 0.15s;
+}
+
+input[type="range"]::-moz-range-thumb {
+  appearance: none; /* Remove the default thumb for Firefox */
+  width: 0;
+  height: 0;
+}
+
+input[type="range"]::-ms-thumb {
+  appearance: none; /* Remove the default thumb for IE/Edge */
+  width: 0;
+  height: 0;
+}
+
+/* The track */
+input[type="range"]::-webkit-slider-runnable-track:hover {
+  background: linear-gradient(
+    to right,
+    rgb(20, 215, 20) 50%,
+    #b3b3b3 50%
+  ); /* Color progress */
+  height: 3px;
+}
+
+/* The thumb (draggable part) */
+input[type="range"]:hover::-webkit-slider-thumb {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -4px; /* Align thumb vertically */
+}
